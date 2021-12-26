@@ -1,6 +1,7 @@
 package com.java.demo.controller;
 
 import java.util.Date;
+import java.util.Random;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +25,7 @@ public class HelloController {
 	
 	@GetMapping("{name}")
 	public String getMessage(@PathVariable("name") String empName) {
-		log.info("Hello "+empName+" Welecome");
+		log.info("Hello "+empName+" Welecome"+new Random().nextInt());
 		return "Hello "+empName+" Welecome";
 	}
 }
