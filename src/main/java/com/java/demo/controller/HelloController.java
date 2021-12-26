@@ -24,6 +24,7 @@ public class HelloController {
 	
 	@GetMapping("{name}")
 	public String getMessage(@PathVariable("name") String empName) {
+		log.info("Hello "+empName+" Welecome");
 		return "Hello "+empName+" Welecome";
 	}
 }
